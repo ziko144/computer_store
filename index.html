@@ -8,10 +8,120 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <title>Computer store</title>
   <style>
-    body{
-      background-color: grey;
-    }
-    .footer{
+            @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    place-items: center;
+    background: linear-gradient(315deg, #ffffff, #d7e1ec);
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+.wrapper .tiktok:hover,
+.wrapper .tiktok:hover .tooltip,
+.wrapper .tiktok:hover .tooltip::before {
+    background: #000000;
+    color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #7a21b6;
+    color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+
+    .footer {
       position: fixed;
       width: 100%;
       background-color: whitesmoke;
@@ -20,13 +130,14 @@
       bottom: 0;
       padding: 20px;
     }
-    .m{
+
+    .m {
       margin-top: 130px;
     }
-    .f{
+
+    .f {
       margin-bottom: 80px;
     }
-
   </style>
   <link rel="icon" href="komp.avif">
 </head>
@@ -45,96 +156,113 @@
           <a class="nav-link active" aria-current="page" href="#SEKILLER">SEKILLER</a>
           <a class="nav-link" href="#HOME">HAQQIMIZDA</a>
           <a class="nav-link" href="#PRICING">QIYMET </a>
-           <a class="nav-link" href="ode.html">ODENIS</a>
-           <a class="nav-link" href="reg.html">Registration</a>
+          <a class="nav-link" href="ode.html">ODENIS</a>
+          <a class="nav-link" href="reg.html">Registration</a>
         </div>
       </div>
     </div>
   </nav>
-  <div id="carouselExampleCaptions " class="carousel slide" >
+  <div id="carouselExampleCaptions " class="carousel slide">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
     </div>
-    <div class="container m" >
-      <div id="carouselExampleCaptions" class="carousel slide" >
-          <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
+    <div class="container m">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="4.jpg" class="d-block w-100 " style="background-size: contain;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-dark">HP</h5>
+              <p class="text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, rerum!
+              </p>
+            </div>
           </div>
-          <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src="4.jpg" class="d-block w-100 " style="background-size: contain;" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5 class="text-dark">HP</h5>
-                      <p class="text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, rerum!
-                      </p>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <img src="5.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5 class="text-light">LENOVO</h5>
-                      <p class="text-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, atque.</p>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <img src="6.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5 class="text-light">HP</h5>
-                      <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, mollitia?</p>
-                  </div>
-              </div>
+          <div class="carousel-item">
+            <img src="5.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-light">LENOVO</h5>
+              <p class="text-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, atque.</p>
+            </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-          </button>
+          <div class="carousel-item">
+            <img src="6.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-light">HP</h5>
+              <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, mollitia?</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        MSI
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium error, sit, excepturi cumque praesentium exercitationem quisquam dignissimos ullam reprehenderit, iure illo. Ullam voluptates incidunt libero! Accusamus exercitationem nulla autem et dicta, sed harum ipsam qui laboriosam ab earum suscipit ipsum reprehenderit ullam aliquid fugit, corrupti odio nisi beatae totam dolorum.</div>
+          
     </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        HP
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quod nulla totam! Suscipit voluptatibus eaque perspiciatis expedita aspernatur ipsam quos vero exercitationem enim reiciendis saepe, dolorem libero vitae odio labore! Molestiae commodi molestias eligendi praesentium ipsum a reiciendis? Excepturi ipsa dolorum, asperiores sint voluptatum amet provident eius iusto. Consequatur, cupiditate.</div>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            MSI
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium error, sit,
+            excepturi cumque praesentium exercitationem quisquam dignissimos ullam reprehenderit, iure illo. Ullam
+            voluptates incidunt libero! Accusamus exercitationem nulla autem et dicta, sed harum ipsam qui laboriosam ab
+            earum suscipit ipsum reprehenderit ullam aliquid fugit, corrupti odio nisi beatae totam dolorum.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            HP
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quod nulla
+            totam! Suscipit voluptatibus eaque perspiciatis expedita aspernatur ipsam quos vero exercitationem enim
+            reiciendis saepe, dolorem libero vitae odio labore! Molestiae commodi molestias eligendi praesentium ipsum a
+            reiciendis? Excepturi ipsa dolorum, asperiores sint voluptatum amet provident eius iusto. Consequatur,
+            cupiditate.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            LENOVO
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto ea
+            odio vitae exercitationem, rem quos ab quasi harum ipsa eaque quaerat accusantium amet nulla. Ratione magnam
+            ullam nobis soluta, ipsa, harum, earum repellendus impedit porro molestiae doloremque. Recusandae ea omnis
+            libero repellat itaque quaerat obcaecati maxime quidem doloribus ad.</div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        LENOVO
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto ea odio vitae exercitationem, rem quos ab quasi harum ipsa eaque quaerat accusantium amet nulla. Ratione magnam ullam nobis soluta, ipsa, harum, earum repellendus impedit porro molestiae doloremque. Recusandae ea omnis libero repellat itaque quaerat obcaecati maxime quidem doloribus ad.</div>
-    </div>
-  </div>
-</div>
 
   </div>
   <div class="container f">
@@ -143,17 +271,20 @@
         <img src="5.jpg " class="card-img-top " alt="...">
         <div class="card-body ">
           <h5 class="card-title">HP</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content.
             This content is a little bit longer.</p>
-  
+
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
           <!-- Button trigger modal -->
-          <button class="bg-warning" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button class="bg-warning" type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
             <p>1500 azn</p>
           </button>
-  
+
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -161,7 +292,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p >QIYMET 1500 AZN</p>
+                  <p>QIYMET 1500 AZN</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -179,18 +310,20 @@
           <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
           <!-- Button trigger modal -->
-          <button class="bg-warning" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button class="bg-warning" type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
             1500 AZN
           </button>
-          
-  
+
+
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                  <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <p>1550 AZN</p>
@@ -208,16 +341,19 @@
         <img src="6.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">HP</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content.
             This card has even longer content than the first to show that equal height action.</p>
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
           <!-- Button trigger modal -->
-          <button class="bg-warning" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-           <p>1500 AZN</p>
+          <button class="bg-warning" type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <p>1500 AZN</p>
           </button>
-  
+
           <!--  Modal -- -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -236,91 +372,43 @@
           </div>
         </div>
       </div>
-
       
+
     </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <ul class="wrapper">
+        <li class="icon facebook">
+            <span><i class="fab fa-facebook-f"></i></span>
+        </li>
+        <li class="icon youtube">
+            <span><i class="fab fa-youtube"></i></span>
+        </li>
+        <li class="icon tiktok">
+            <span><i class="fab fa-tiktok"></i></span>
+        </li>
+        <li class="icon instagram">
+            <span><i class="fab fa-instagram"></i></span>
+        </li>
+    </ul>
   </div>
 
-  <div class="modal">
-    <form class="form">
-        <div class="paymentother">
-            <button name="apple-pay" type="button">
-                <svg xml:space="preserve" viewBox="0 0 512 210.2" y="0px" x="0px" id="Layer_1" version="1.1"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M93.6,27.1C87.6,34.2,78,39.8,68.4,39c-1.2-9.6,3.5-19.8,9-26.1c6-7.3,16.5-12.5,25-12.9  C103.4,10,99.5,19.8,93.6,27.1 M102.3,40.9c-13.9-0.8-25.8,7.9-32.4,7.9c-6.7,0-16.8-7.5-27.8-7.3c-14.3,0.2-27.6,8.3-34.9,21.2  c-15,25.8-3.9,64,10.6,85c7.1,10.4,15.6,21.8,26.8,21.4c10.6-0.4,14.8-6.9,27.6-6.9c12.9,0,16.6,6.9,27.8,6.7  c11.6-0.2,18.9-10.4,26-20.8c8.1-11.8,11.4-23.3,11.6-23.9c-0.2-0.2-22.4-8.7-22.6-34.3c-0.2-21.4,17.5-31.6,18.3-32.2  C123.3,42.9,107.7,41.3,102.3,40.9 M182.6,11.9v155.9h24.2v-53.3h33.5c30.6,0,52.1-21,52.1-51.4c0-30.4-21.1-51.2-51.3-51.2H182.6z   M206.8,32.3h27.9c21,0,33,11.2,33,30.9c0,19.7-12,31-33.1,31h-27.8V32.3z M336.6,169c15.2,0,29.3-7.7,35.7-19.9h0.5v18.7h22.4V90.2  c0-22.5-18-37-45.7-37c-25.7,0-44.7,14.7-45.4,34.9h21.8c1.8-9.6,10.7-15.9,22.9-15.9c14.8,0,23.1,6.9,23.1,19.6v8.6l-30.2,1.8  c-28.1,1.7-43.3,13.2-43.3,33.2C298.4,155.6,314.1,169,336.6,169z M343.1,150.5c-12.9,0-21.1-6.2-21.1-15.7c0-9.8,7.9-15.5,23-16.4  l26.9-1.7v8.8C371.9,140.1,359.5,150.5,343.1,150.5z M425.1,210.2c23.6,0,34.7-9,44.4-36.3L512,54.7h-24.6l-28.5,92.1h-0.5  l-28.5-92.1h-25.3l41,113.5l-2.2,6.9c-3.7,11.7-9.7,16.2-20.4,16.2c-1.9,0-5.6-0.2-7.1-0.4v18.7C417.3,210,423.3,210.2,425.1,210.2z"
-                        id="XMLID_34_"></path>
-                </svg>
-            </button>
-            <button name="google-pay" type="button">
-                <svg fill="none" viewBox="0 0 80 39" height="39" width="80" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_134_34)">
-                        <path fill="#5F6368"
-                            d="M37.8 19.7V29H34.8V6H42.6C44.5 6 46.3001 6.7 47.7001 8C49.1001 9.2 49.8 11 49.8 12.9C49.8 14.8 49.1001 16.5 47.7001 17.8C46.3001 19.1 44.6 19.8 42.6 19.8L37.8 19.7ZM37.8 8.8V16.8H42.8C43.9 16.8 45.0001 16.4 45.7001 15.6C47.3001 14.1 47.3 11.6 45.8 10.1L45.7001 10C44.9001 9.2 43.9 8.7 42.8 8.8H37.8Z">
-                        </path>
-                        <path fill="#5F6368"
-                            d="M56.7001 12.8C58.9001 12.8 60.6001 13.4 61.9001 14.6C63.2001 15.8 63.8 17.4 63.8 19.4V29H61V26.8H60.9001C59.7001 28.6 58 29.5 56 29.5C54.3 29.5 52.8 29 51.6 28C50.5 27 49.8 25.6 49.8 24.1C49.8 22.5 50.4 21.2 51.6 20.2C52.8 19.2 54.5 18.8 56.5 18.8C58.3 18.8 59.7 19.1 60.8 19.8V19.1C60.8 18.1 60.4 17.1 59.6 16.5C58.8 15.8 57.8001 15.4 56.7001 15.4C55.0001 15.4 53.7 16.1 52.8 17.5L50.2001 15.9C51.8001 13.8 53.9001 12.8 56.7001 12.8ZM52.9001 24.2C52.9001 25 53.3001 25.7 53.9001 26.1C54.6001 26.6 55.4001 26.9 56.2001 26.9C57.4001 26.9 58.6 26.4 59.5 25.5C60.5 24.6 61 23.5 61 22.3C60.1 21.6 58.8 21.2 57.1 21.2C55.9 21.2 54.9 21.5 54.1 22.1C53.3 22.6 52.9001 23.3 52.9001 24.2Z">
-                        </path>
-                        <path fill="#5F6368"
-                            d="M80 13.3L70.1 36H67.1L70.8 28.1L64.3 13.4H67.5L72.2 24.7H72.3L76.9 13.4H80V13.3Z">
-                        </path>
-                        <path fill="#4285F4"
-                            d="M25.9 17.7C25.9 16.8 25.8 15.9 25.7 15H13.2V20.1H20.3C20 21.7 19.1 23.2 17.7 24.1V27.4H22C24.5 25.1 25.9 21.7 25.9 17.7Z">
-                        </path>
-                        <path fill="#34A853"
-                            d="M13.1999 30.5999C16.7999 30.5999 19.7999 29.3999 21.9999 27.3999L17.6999 24.0999C16.4999 24.8999 14.9999 25.3999 13.1999 25.3999C9.7999 25.3999 6.7999 23.0999 5.7999 19.8999H1.3999V23.2999C3.6999 27.7999 8.1999 30.5999 13.1999 30.5999Z">
-                        </path>
-                        <path fill="#FBBC04"
-                            d="M5.8001 19.8999C5.2001 18.2999 5.2001 16.4999 5.8001 14.7999V11.3999H1.4001C-0.499902 15.0999 -0.499902 19.4999 1.4001 23.2999L5.8001 19.8999Z">
-                        </path>
-                        <path fill="#EA4335"
-                            d="M13.2 9.39996C15.1 9.39996 16.9 10.1 18.3 11.4L22.1 7.59996C19.7 5.39996 16.5 4.09996 13.3 4.19996C8.3 4.19996 3.7 6.99996 1.5 11.5L5.9 14.9C6.8 11.7 9.8 9.39996 13.2 9.39996Z">
-                        </path>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_134_34">
-                            <rect fill="white" height="38.1" width="80"></rect>
-                        </clipPath>
-                    </defs>
-                </svg>
-            </button>
-        </div>
-        <div class="separator">
-            <hr class="line">
-            <p>OR</p>
-            <hr class="line">
-        </div>
-        <div class="card-info">
-            <div class="input_container">
-                <label class="input_label">Card holder name</label>
-                <input class="input_field" type="text" placeholder="Enter your full name">
-            </div>
-            <div class="input_container">
-                <label class="input_label">Card Number</label>
-                <input class="input_field" type="number" placeholder="0000 0000 0000 0000">
-            </div>
-            <div class="input_container">
-                <label class="input_label">Expiry Date / CVV</label>
-                <div class="split">
-                    <input class="input_field" style="width: 250px;" type="text" placeholder="01/23">
-                    <input class="input_field" style="width: 110px;" type="number" placeholder="CVV">
-                </div>
-            </div>
-        </div>
-        <button class="checkout" style="cursor: pointer;">
-            <span>Checkout</span>
-        </button>
-    </form>
-</div>
 
 
-  <div class="footer">Design by Ziko &copy; 2023</div>
+    <div class="footer">Design by Ziko &copy; 2023</div>
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+  </body>
 
 </html>
