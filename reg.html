@@ -269,6 +269,10 @@
             background: transparent;
             box-shadow: 13px 849px #FFF, 1785px 1211px #FFF, 866px 943px #FFF, 1269px 1284px #FFF, 1049px 228px #FFF, 163px 1732px #FFF, 658px 812px #FFF, 974px 1792px #FFF, 962px 913px #FFF, 1848px 170px #FFF, 264px 1653px #FFF, 645px 1375px #FFF, 400px 1129px #FFF, 1271px 171px #FFF, 1722px 1955px #FFF, 117px 1525px #FFF, 1738px 1113px #FFF, 164px 501px #FFF, 388px 272px #FFF, 193px 263px #FFF, 82px 1370px #FFF, 1637px 669px #FFF, 1746px 1369px #FFF, 1258px 1023px #FFF, 1697px 1163px #FFF, 1829px 1430px #FFF, 1431px 1055px #FFF, 1197px 682px #FFF, 881px 1828px #FFF, 341px 141px #FFF, 1226px 1588px #FFF, 198px 1862px #FFF, 746px 1976px #FFF, 176px 641px #FFF, 1760px 499px #FFF, 20px 1108px #FFF, 232px 382px #FFF, 1318px 1817px #FFF, 897px 139px #FFF, 1734px 1650px #FFF, 299px 641px #FFF, 1991px 1032px #FFF, 1191px 454px #FFF, 1980px 1537px #FFF, 465px 255px #FFF, 1394px 1668px #FFF, 190px 650px #FFF, 1598px 1225px #FFF, 1824px 452px #FFF, 1441px 770px #FFF, 1986px 682px #FFF, 1882px 545px #FFF, 1279px 129px #FFF, 817px 558px #FFF, 1171px 1930px #FFF, 1865px 33px #FFF, 1096px 834px #FFF, 1783px 473px #FFF, 596px 1523px #FFF, 1396px 137px #FFF, 1px 1962px #FFF, 1732px 679px #FFF, 3px 656px #FFF, 597px 995px #FFF, 1313px 230px #FFF, 1707px 1670px #FFF, 841px 386px #FFF, 255px 1430px #FFF, 1297px 182px #FFF, 615px 1969px #FFF, 643px 446px #FFF, 908px 265px #FFF, 747px 615px #FFF, 1477px 1305px #FFF, 180px 843px #FFF, 438px 487px #FFF, 163px 1436px #FFF, 1251px 1170px #FFF, 535px 924px #FFF, 898px 393px #FFF, 984px 430px #FFF, 1268px 419px #FFF, 505px 1359px #FFF, 571px 1078px #FFF, 194px 1248px #FFF, 1816px 1300px #FFF, 1847px 1971px #FFF, 1174px 531px #FFF, 256px 618px #FFF, 1065px 1149px #FFF, 664px 339px #FFF, 1470px 1774px #FFF, 563px 480px #FFF, 723px 305px #FFF, 1397px 1714px #FFF, 574px 1879px #FFF, 483px 391px #FFF, 1939px 1541px #FFF, 597px 984px #FFF, 1093px 1694px #FFF;
         }
+        ::selection{
+            background-color: black;
+            color: gold;
+        }
 
 
         @keyframes animStar {
@@ -310,8 +314,19 @@
                                                 <i class="input-icon uil uil-at"></i>
                                             </div>
                                             <div class="form-group mt-2">
-                                                <input type="password" class="form-style" placeholder="Password">
+                                                <input type="password" class="form-style" id="pwd" placeholder="Password">
+                                                <input type="checkbox" id="chk"> Show Password
                                                 <i class="input-icon uil uil-lock-alt"></i>
+                                                <script>
+                                                    const pwd = document.getElementById("pwd");
+                                                    const chk = document.getElementById("chk");
+
+                                                    chk.onchange = function(e)  {
+                                                        pwd . type = chk.cheked ? "text" : "password";
+                                                    };
+                                                    
+                                                </script>
+
                                             </div>
                                                     Forgot your password?</a></p>
                                         </div>
@@ -348,6 +363,8 @@
             </div>
         </div>
     </div>
+
+    
 </body>
 
 </html>
